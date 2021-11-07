@@ -13,35 +13,36 @@ const styles = ["i", "b", "u"]
 button.addEventListener("click", restyle);
 
 function restyle () {
-  // randomize color
-  var randomRed = Math.random() * 255;
-  var randomGreen = Math.random() * 255;
-  var randomBlue = Math.random() * 255;
-  var outputColor = "rgb(" + randomRed + "," + randomGreen + "," + randomBlue + ")";
-  output.style.color = outputColor;
+   // randomize color
+    var randomRed = Math.random() * 255;
+    var randomGreen = Math.random() * 255;
+    var randomBlue = Math.random() * 255;
+    var outputColor = "rgb(" + randomRed + "," + randomGreen + "," + randomBlue + ")";
+    output.style.color = outputColor;
 
-  // randomize font style
-  // reset style values
-  output.style.fontStyle = "normal";
-  output.style.fontWeight = "normal";
-  output.style.textDecoration = "none";
+    // randomize font style
+    // reset style values
+    output.style.fontStyle = "normal";
+    output.style.fontWeight = "normal";
+    output.style.textDecoration = "none";
 
-  var randInd = Math.random() * 3; // random val
-  // randomly choose style from list of styles
-  if ("i" == styles[parseInt(randInd, 10)]) {
-    output.style.fontStyle = "italic";
-  } else if ("b" == styles[parseInt(randInd, 10)]) {
-    output.style.fontWeight = "bold";
-  } else if ("u" == styles[parseInt(randInd, 10)]) {
-    output.style.textDecoration = "underline";
-  }
+    var randInd = Math.random() * 3; // random val
+    // randomly choose style from list of styles
+    if ("i" == styles[parseInt(randInd, 10)]) {
+      output.style.fontStyle = "italic";
+    } else if ("b" == styles[parseInt(randInd, 10)]) {
+      output.style.fontWeight = "bold";
+    } else if ("u" == styles[parseInt(randInd, 10)]) {
+      output.style.textDecoration = "underline";
+    }
 
-  // randomize background color
-  var rRed = Math.random() * 255;
-  var rGreen = Math.random() * 255;
-  var rBlue = Math.random() * 255;
-  var bkgdColor = "rgba(" + rRed + "," + rGreen + "," + rBlue + ", 0.5)";
-  output.style.backgroundColor = bkgdColor;
+    // randomize background color
+    var rRed = Math.random() * 255;
+    var rGreen = Math.random() * 255;
+    var rBlue = Math.random() * 255;
+    var bkgdColor = "rgba(" + rRed + "," + rGreen + "," + rBlue + ", 0.5)";
+    output.style.backgroundColor = bkgdColor;
+  
 
   // call message func
   fortune (document.getElementById("input").value);
@@ -50,7 +51,7 @@ function restyle () {
 function fortune (name) {
   // random message
   if (name == "") {
-    output.innerHTML = "Enter your name to find out your forture!!";
+    output.innerHTML = "Enter your name to reveal your fate!";
   } else {
     var x = Math.random() * 5;
     output.innerHTML = name + ", " + list[parseInt(x, 10)]; // parseInt() turns strings into int
