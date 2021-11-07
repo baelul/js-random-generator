@@ -1,21 +1,32 @@
 * {
   font-family: 'Open Sans', sans-serif;
   color: white;
-  background-color: lightpink;
 }
 
-.content {
+.love-content {
+  background-color: lightpink;
+  margin-bottom: 10px;
   padding: 5px 10px 5px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  vertical-align: middle;
+}
+
+.calc-content {
+  background-color: lightblue;
+  border-width: 0;
+  padding: 5px 10px 5px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 h1 {
   font-size: 50px;
   font-weight: 800;
+  margin-bottom: 0;
   font-style: italic;
 }
 
@@ -24,22 +35,18 @@ input {
   color: grey;
 }
 
-#inputDiv {
+.inputDiv {
   margin: 0px 40vw 0px 40vw;
-}
-
-#outputDiv {
-  margin: 0px 30vw 0px 30vw;
-}
-
-#button {
-  text-align: center;
-}
-
-#input {
   margin-bottom: 10px;
 }
 
-#output {
+.outputDiv {
+  margin: 0px 30vw 0px 30vw;
   font-size: 30px;
+}
+
+.button {
+  margin-top: 10px;
+  text-align: center;
+  background-color: grey;
 }

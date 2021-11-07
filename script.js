@@ -1,5 +1,9 @@
-var button = document.getElementById("button");
-var output = document.getElementById("output");
+var loveButton = document.getElementById("love-button");
+var loveOutput = document.getElementById("love-output");
+
+var calcButton = document.getElementById("calc-button");
+var calcOutput = document.getElementById("calc-output");
+
 const list = [
   "love will find you soon!",
   "maybe you should try again next time...",
@@ -10,7 +14,8 @@ const list = [
 
 const styles = ["i", "b", "u"]
 
-button.addEventListener("click", restyle);
+loveButton.addEventListener("click", restyle);
+calcButton.addEventListener("click", callHalfNum);
 
 function restyle () {
    // randomize color
@@ -18,22 +23,22 @@ function restyle () {
     var randomGreen = Math.random() * 255;
     var randomBlue = Math.random() * 255;
     var outputColor = "rgb(" + randomRed + "," + randomGreen + "," + randomBlue + ")";
-    output.style.color = outputColor;
+    loveOutput.style.color = outputColor;
 
     // randomize font style
     // reset style values
-    output.style.fontStyle = "normal";
-    output.style.fontWeight = "normal";
-    output.style.textDecoration = "none";
+    loveOutput.style.fontStyle = "normal";
+    loveOutput.style.fontWeight = "normal";
+    loveOutput.style.textDecoration = "none";
 
     var randInd = Math.random() * 3; // random val
     // randomly choose style from list of styles
     if ("i" == styles[parseInt(randInd, 10)]) {
-      output.style.fontStyle = "italic";
+      loveOutput.style.fontStyle = "italic";
     } else if ("b" == styles[parseInt(randInd, 10)]) {
-      output.style.fontWeight = "bold";
+      loveOutput.style.fontWeight = "bold";
     } else if ("u" == styles[parseInt(randInd, 10)]) {
-      output.style.textDecoration = "underline";
+      loveOutput.style.textDecoration = "underline";
     }
 
     // randomize background color
@@ -41,19 +46,34 @@ function restyle () {
     var rGreen = Math.random() * 255;
     var rBlue = Math.random() * 255;
     var bkgdColor = "rgba(" + rRed + "," + rGreen + "," + rBlue + ", 0.5)";
-    output.style.backgroundColor = bkgdColor;
-  
+    loveOutput.style.backgroundColor = bkgdColor;
+
 
   // call message func
-  fortune (document.getElementById("input").value);
+  fortune (document.getElementById("love-input").value);
 }
 
 function fortune (name) {
   // random message
   if (name == "") {
-    output.innerHTML = "Enter your name to reveal your fate!";
+    loveOutput.innerText = "";
   } else {
     var x = Math.random() * 5;
-    output.innerHTML = name + ", " + list[parseInt(x, 10)]; // parseInt() turns strings into int
+    loveOutput.innerText = name + ", " + list[parseInt(x, 10)]; // parseInt() turns strings into int
+  }
+}
+
+function callHalfNum() {
+  halfNumber(document.getElementById("calc-input").value);
+}
+
+function halfNumber(num) {
+  // divide
+  if (num == "") {
+    calcOutput.innerText = "";
+  } else {
+    var x = num / 2;
+    calcOutput.style.fontWeight = "bold";
+    calcOutput.innerText = x;
   }
 }

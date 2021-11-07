@@ -5,19 +5,30 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
     <title></title>
   </head>
   <body>
-      <div class="content">
+      <div class="love-content">
         <h1>Random Love Generator</h1>
         <p>Type your name to find out your fate:</p>
-        <div id="inputDiv">
-          <input type="text" id="input"><br>
-          <button type="button" name="button" id="button">Enter</button>
+        <div id="love-div" class="inputDiv">
+          <input type="text" id="love-input"><br>
+          <button type="button" id="love-button" class="button">Enter</button>
         </div>
-        <div id="outputDiv">
-          <p id=output>Enter your name to reveal your fate!</p>
+        <div class="outputDiv">
+          <p id=love-output></p>
+        </div>
+      </div>
+      <div class="calc-content">
+        <h1>Calculator</h1>
+        <p>Enter a number, and this calculator will half it!</p>
+        <div id="calc-div" class="inputDiv">
+          <input type="text" id="calc-input"><br>
+          <button type="button" id="calc-button" class="button">Enter</button>
+        </div>
+        <div class="outputDiv">
+          <p id=calc-output></p>
         </div>
       </div>
     <script type="text/javascript" src="script.js"></script>
