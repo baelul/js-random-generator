@@ -8,4 +8,4 @@ You will create an interactive page that generates some kind of "random" content
 
 You will also be creating a calculator
 
-- Write a function called halfNumber that will take one argument (a number), divide it by 2, and return the result in an alert. It should also log a string to the console like "Half of 5 is 2.5.".
+- Write a function called halfNumber that will take one argument (a number), divide it by 2, and return the result in an `alert`. It should also log a string to the console like "Half of 5 is 2.5.".
